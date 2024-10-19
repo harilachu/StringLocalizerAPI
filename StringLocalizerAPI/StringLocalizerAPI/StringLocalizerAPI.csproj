@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="i18n\SharedResource.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="i18n\SharedResource.en.resx" />
+    <EmbeddedResource Remove="i18n\SharedResource.es.resx" />
+    <EmbeddedResource Remove="i18n\SharedResource.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="My.Extensions.Localization.Json" Version="3.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+  </ItemGroup>
+
+</Project>
